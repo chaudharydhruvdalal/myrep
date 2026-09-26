@@ -1,0 +1,20 @@
+# AWS Infrastructure as Code (Terraform) ☁️
+
+## Overview
+This repository contains Infrastructure as Code (IaC) written in Terraform to provision scalable and secure AWS resources. It demonstrates best practices in cloud automation, state management, and modular design.
+
+## Architecture & Resources Provisioned
+* **Compute:** AWS EC2 instances (`ec2.tf`) configured for scalable workloads.
+* **Storage:** Amazon S3 buckets (`s3.tf`) for secure object storage.
+* **Database/State Management:** Amazon DynamoDB (`dynamodb.tf`) integrated for robust data handling and Terraform state locking.
+* **Security:** Strict credential management and exclusion of local `.tfstate` files to ensure zero secret leakage.
+
+## How to Run
+1. Clone this repository to your local machine.
+2. Ensure the AWS CLI is configured with your IAM credentials.
+3. Initialize the working directory:
+   `terraform init`
+4. Review the infrastructure execution plan:
+   `terraform plan`
+5. Apply the configuration to your AWS account:
+   `terraform apply`
